@@ -1,0 +1,470 @@
+html {
+  box-sizing: border-box;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+@media (max-width: 1023px) {
+  html {
+    scroll-snap-type: none;
+  }
+}
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+*,*::after,*::before {
+  box-sizing: inherit;
+}
+body {
+  min-width: 320px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  white-space: pre-line;
+}
+ul {
+    list-style: none;
+}
+
+.App {
+  text-align: center;
+  font-size: calc(15px + 0.390625vw)
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  top: 0px;
+  height: 100px;
+  width: 100vw;
+  background-image: linear-gradient(to right, #e405f5, #cb109f, #a807b4);
+  box-shadow: 0px 2px 5px 5px black;
+  z-index: 5;
+}
+
+.navbar_icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.navbar_icons_instagram {
+  background-image: url("assets/instagram.svg");
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.navbar_icons_weblancer {
+  background-image: url("assets/telegram.svg");
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.navbar_icons_telegram {
+  background-image: url("assets/weblancer.png");
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.navbar_logo {
+  font-size: calc(20px + 0.8vw);
+  font-weight: bold;
+  color: #FFF;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .navbar_logo {
+    display: none;
+  }
+}
+
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 30px 10px;
+  margin: 20px;
+  transition: transform 0.5s;
+  will-change: transform;
+  z-index: 10;
+}
+
+.hamb-line {
+  background: #FFF;
+  display: block;
+  height: 3px;
+  position: relative;
+  width: 40px;
+}
+
+.hamb-line::before,
+.hamb-line::after {
+  background: #FFF;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+  width: 100%;
+}
+
+.hamb-line::before {
+  top: 10px;
+}
+
+.hamb-line::after {
+  top: -10px;
+}
+
+.nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 0%;
+  max-height: 100%;
+  height: 100vh;
+  width: 30vw;
+  background-color: #fff;
+  opacity: 0.8;
+  transition: max-width 0.5s 0s linear;
+  will-change: width;
+  z-index: 8;
+}
+@media (max-width: 768px) {
+  .nav {
+    width: 50vw;
+  }
+}
+@media (max-width: 640px) {
+  .nav {
+    width: 100vw;
+    opacity: 0.95;
+  }
+}
+
+.menu {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s;
+  will-change: visibility;
+}
+.menu li {
+  display: block;
+  padding: 0px 0px 30px 0px;
+  color: #000;
+  font-size: calc(15px + 1vw);
+  cursor: pointer;
+}
+.menu li:hover {
+  font-size: calc(25px + 1vw);
+}
+
+.side-menu {
+  display: none;
+}
+
+.side-menu:checked ~ nav {
+  max-width: 100%;
+  transition: max-width 0.5s 0s linear;
+  will-change: width;
+}
+
+.side-menu:checked ~ * .menu {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.side-menu:checked ~ .hamb {
+  border: 2px solid #000;
+  border-radius: 50%;
+  transition: transform 0.5s;
+  transform: rotate(360deg);
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  z-index: 1;
+  background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  background: #000;
+  top: 0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  background: #000;
+  top: 0;
+}
+
+.lang {
+  display: flex;
+  flex-direction: row;
+}
+.lang_btn {
+  margin: 20px;
+  cursor: pointer;
+}
+.active {
+  background: linear-gradient(#e405f5, #a807b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.background {
+  position: fixed;
+  top: 106px;
+  background-color: #282c34;
+  height: 100vh;
+  width: 100%;
+  z-index: -2;
+}
+
+.background_avatar {
+  background-image: url('assets/avatar.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center;
+  float: right;
+  height: 100vh;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  .background_avatar {
+     width: 100%;
+  }
+}
+
+.container {
+  width: 100%;
+  background-color: transparent;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home {
+  max-width: 50%;
+  padding: 0px 4rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+@media (max-width: 768px) {
+  .home {
+     max-width: 100%;
+     padding: 0px 20px;
+  }
+}
+.home h3{ 
+  margin-top: 2rem;
+}
+.home p {
+  margin-top: 2rem;
+}
+.rounded_avatar {
+  background-image: url('assets/avatar1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 70vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+@media (max-width: 768px) {
+  .rounded_avatar {
+    display: none;
+  }
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  width: 100%;
+  padding: 150px 20px;
+  scroll-snap-align: start;
+}
+.about p{
+  margin-top: 4rem;
+  text-align: left;
+}
+.about_text {
+  width: 60%;
+}
+@media (max-width: 480px) {
+  .about_text {
+    width: 100%;
+  }
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  background-color: #a807b4;
+  min-height: 100vh;
+  width: 100%;
+  padding: 150px 0px;
+  box-shadow: 0px -5px 5px 5px black, 0px 5px 5px 5px black;
+  scroll-snap-align: start;
+}
+.videos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+  background-color: #a807b4;
+  margin-top: 2rem;
+  height: auto;
+  width: 100%;
+}
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  width: 600px;
+  height: auto;
+  margin: 20px;
+  padding: 20px 20px 15px 20px;
+  background-color: transparent;
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .video-container {
+    min-width: 600px;
+    width: auto;
+    margin: 20px 0px;
+  }
+}
+@media (max-width: 640px) {
+  .video-container {
+    min-width: 460px;
+    width: auto;
+  }
+}
+@media (max-width: 480px) {
+  .video-container {
+    min-width: 320px;
+    width: auto;
+  }
+}
+.video-responsive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width:600px;
+  width: 100%;
+  max-height: 350px;
+  height: 100%;
+}
+.video-player {
+  min-height: 315px;
+  width: 100%;
+  height: 100%;
+}
+.video-hashtags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-top: 10px;
+  font-size: calc(10px + 0.390625vw)
+}
+.video-hashtag {
+  background-color: #282c34;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 2px 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.contact {
+  max-width: 50%;
+  padding: 0px 4rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+@media (max-width: 768px) {
+  .contact {
+    max-width: 60%;
+    align-self: end;
+  }
+}
+@media (max-width: 480px) {
+  .contact {
+    max-width: 100%;
+    align-self: center;
+    padding: 0px;
+  }
+}
+.contact h3{ 
+  margin-top: 2rem;
+}
+.contact p {
+  margin-top: 2rem;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 107px;
+  background-image: linear-gradient(to right, #a807b4, #cb109f, #e405f5);
+  box-shadow: 0px -2px 5px 5px black;
+  scroll-snap-align: start;
+}
