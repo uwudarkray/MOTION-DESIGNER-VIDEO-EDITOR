@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 const projectsData = [
 {
-  src: 'https://youtu.be/53Q8bnRqmeI',
-  hashtags: ['promotional video', 'transitions', 'text animation', ' background music'],
+  src: 'https://youtu.be/WapFMemXyRg',
+  hashtags: ['printing house', 'background', 'text animation', 'mask', 'mask animation'],
 },
 {
   src: 'https://youtu.be/FNuRJMy4mn0',
@@ -16,16 +16,16 @@ const projectsData = [
   hashtags: ['transitions', 'text animation', ' background music'],
 },
 {
-  src: 'https://youtu.be/xtBu5TRY9C0',
-  hashtags: ['funny moments', 'roblox doors', 'video transitions', 'subtitles', 'memes'],
+  src: 'https://youtu.be/-R7VvY3mXXE',
+  hashtags: ['funny moments', 'roblox evade', 'subtitles', 'memes', 'sfx', 'vfx'],
 },
 {
-  src: 'https://youtu.be/ZQjsW7u_CVQ',
-  hashtags: ['funny moments', 'roblox evade', 'video transitions', 'subtitles', 'memes'],
+  src: 'https://youtu.be/U0O8IsJtABg',
+  hashtags: ['funny moments', 'roblox strongest battlegrounds', 'subtitles', 'memes', 'sfx', 'vfx'],
 },
 {
-  src: 'https://youtu.be/PXgnE0l4oPk',
-  hashtags: ['funny moments', 'roblox murder mystery', 'video transitions', 'subtitles', 'memes'],
+  src: 'https://youtu.be/PZCsXPODcGs',
+  hashtags: ['funny moments', 'roblox strongest battlegrounds', 'subtitles', 'memes', 'sfx', 'vfx'],
 }
 ]
 
