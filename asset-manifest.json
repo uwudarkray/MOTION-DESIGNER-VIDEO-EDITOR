@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MOTION-DESIGNER-VIDEO-EDITOR/static/css/main.4e92da21.css",
-    "main.js": "/MOTION-DESIGNER-VIDEO-EDITOR/static/js/main.0d56ce09.js",
+    "main.js": "/MOTION-DESIGNER-VIDEO-EDITOR/static/js/main.72fa1cb0.js",
     "reactPlayerYouTube.js": "/MOTION-DESIGNER-VIDEO-EDITOR/static/js/reactPlayerYouTube.7cc15bf0.chunk.js",
     "reactPlayerSoundCloud.js": "/MOTION-DESIGNER-VIDEO-EDITOR/static/js/reactPlayerSoundCloud.21c13ce4.chunk.js",
     "reactPlayerVimeo.js": "/MOTION-DESIGNER-VIDEO-EDITOR/static/js/reactPlayerVimeo.5ae5b829.chunk.js",
@@ -23,7 +23,7 @@
     "index.html": "/MOTION-DESIGNER-VIDEO-EDITOR/index.html",
     "static/media/telegram.svg": "/MOTION-DESIGNER-VIDEO-EDITOR/static/media/telegram.a1f24d54e716cdc2a9d5.svg",
     "main.4e92da21.css.map": "/MOTION-DESIGNER-VIDEO-EDITOR/static/css/main.4e92da21.css.map",
-    "main.0d56ce09.js.map": "/MOTION-DESIGNER-VIDEO-EDITOR/static/js/main.0d56ce09.js.map",
+    "main.72fa1cb0.js.map": "/MOTION-DESIGNER-VIDEO-EDITOR/static/js/main.72fa1cb0.js.map",
     "reactPlayerYouTube.7cc15bf0.chunk.js.map": "/MOTION-DESIGNER-VIDEO-EDITOR/static/js/reactPlayerYouTube.7cc15bf0.chunk.js.map",
     "reactPlayerSoundCloud.21c13ce4.chunk.js.map": "/MOTION-DESIGNER-VIDEO-EDITOR/static/js/reactPlayerSoundCloud.21c13ce4.chunk.js.map",
     "reactPlayerVimeo.5ae5b829.chunk.js.map": "/MOTION-DESIGNER-VIDEO-EDITOR/static/js/reactPlayerVimeo.5ae5b829.chunk.js.map",
@@ -41,6 +41,6 @@
   },
   "entrypoints": [
     "static/css/main.4e92da21.css",
-    "static/js/main.0d56ce09.js"
+    "static/js/main.72fa1cb0.js"
   ]
 }
